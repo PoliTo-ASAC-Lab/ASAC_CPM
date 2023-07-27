@@ -51,8 +51,9 @@ To initialize the cluster control system, MicroPython has to be installed on the
     ampy -p $PORT ls
     ```
 
-4) **Try the control interface**
-    Once all is set up, you can try the cluster control in interface by opening a serial connection (9600-8N1) with the NodeMCU module. If everything is good, a prompt '**#**' should appear. Here below are the available commands.
+4) **Use the control interface**
+
+   Once all is set up, you can try the cluster control in interface by opening a serial connection (9600-8N1) with the NodeMCU module. If everything is good, a prompt '**#**' should appear. Here below are the available commands.
 
     | Command           | Description |
     | :---------------- | :------ |
