@@ -1,4 +1,4 @@
-# FI-playground
+# ASAC_FI_playground
 
 Code and documentation for FPGA/MPSoC cluster management architecture, to be used for testing purposes or extensive fault injection campaigns. It can be easily adapted to be used with other kinds of board composing the cluster, like Arduino, Raspberry-Pi, others.
 
