@@ -28,6 +28,7 @@ Here below are some photos of an ASAC_FI_playground istance, mounted in ASAC Lab
 
 To initialize the cluster control system, MicroPython has to be installed on the NodeMCU module, together with some source code implementing the control features.
 
+0) **Install CH340 Driver**: for example through [this link](https://www.wch.cn/download/CH341SER_EXE.html).
 1) **Installing MicroPython firmware**: follow [this guide](docs/ESP8266_uPy_guide.pdf).
 
 2) **Uploading the source files enabling control interface**
@@ -51,7 +52,7 @@ To initialize the cluster control system, MicroPython has to be installed on the
 
 4) **Use the control interface**
 
-   Once all is set up, you can try the cluster control in interface by opening a serial connection (9600-8N1) with the NodeMCU module. If everything is good, a prompt '**#**' should appear. Here below are the available commands.
+   Once all is set up, you can try the cluster control in interface by opening a serial connection (115200-8N1) with the NodeMCU module. If everything is good, a prompt '**#**' should appear. Here below are the available commands.
 
     | Command           | Description |
     | :---------------- | :------ |
