@@ -9,13 +9,11 @@ Code and documentation for FPGA/MPSoC cluster management architecture, to be use
 The overall setup requires low-cost components only and can be easily adapted and scaled based on necessity. To manage the power supply of the cluster nodes (ON/OFF) a set of relay switches is controlled by a [NodeMCU Lua Lolin V3 Module](https://www.az-delivery.de/en/products/nodemcu-lolin-v3-modul-mit-esp8266), implementing a user interface accessible through USB-serial connection.
 Here below is the general scheme of the hardware setup:
 
+![Picture1](https://github.com/danirizziero/FI-playground/assets/37268662/107f36ac-55cc-474d-a424-6bb6e35217cd)
 
-
-![Picture1](https://github.com/danirizziero/FI-playground/assets/37268662/8c61bbd2-a9d0-40e4-949e-3d9695153d4c)
 Here below the details about the NodeMCU module pin usage:
 
 ![pinout_detail](https://github.com/danirizziero/FI-playground/assets/37268662/065e586b-f8ef-446f-b161-7249cee2d9b2)
-
 
 >***Note***: an additional VCC >= 5V is needed to power the relay switches (!= Relay Ctrl). As can be seen in the general scheme, the PS line could be used for this purpose.
 
