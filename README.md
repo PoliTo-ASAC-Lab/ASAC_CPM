@@ -30,7 +30,7 @@ Here below are some photos of an ASAC_FI_playground istance, mounted in ASAC Lab
 
 To initialize the cluster control system, MicroPython has to be installed on the NodeMCU module, together with some source code implementing the control features.
 
-1) **Installing MicroPython firmware**: you can refer to [this guide](docs/NodeMCUv3_uPy_guide.pdf).
+1) **Installing MicroPython firmware**: you can refer to [this guide](docs/ESP8266_uPy_guide.pdf).
 
 2) **Uploading the source files enabling control interface**
    
