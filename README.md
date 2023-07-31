@@ -1,6 +1,6 @@
-# ASAC_FI_playground
+# ASAC_CPM - ASAC Cluster Power Manager
 
-Code and documentation for FPGA/MPSoC cluster management architecture, to be used for testing purposes or extensive fault injection campaigns. It can be easily adapted to be used with other kinds of board composing the cluster, like Arduino, Raspberry-Pi, others.
+ASAC_CPM is a Cluster Power Manager solution, to be used for testing purposes or extensive fault injection campaigns involving a cluster of devices. It can be easily adapted to be used with other kinds of board composing the cluster, like Arduino, Raspberry-Pi, others.
 
 ------
 
@@ -9,31 +9,32 @@ Code and documentation for FPGA/MPSoC cluster management architecture, to be use
 The overall setup requires low-cost components only and can be easily adapted and scaled based on necessity. To manage the power supply of the cluster nodes (ON/OFF) a set of relay switches is controlled by a [NodeMCU Lua Lolin V3 Module](https://www.az-delivery.de/en/products/nodemcu-lolin-v3-modul-mit-esp8266), implementing a user interface accessible through USB-serial connection.
 Here below is the general scheme of the hardware setup:
 
-![Picture1](https://github.com/danirizziero/FI-playground/assets/37268662/107f36ac-55cc-474d-a424-6bb6e35217cd)
+![HW_Setup](https://github.com/danirizziero/FI-playground/assets/37268662/107f36ac-55cc-474d-a424-6bb6e35217cd)
 
 Here below the details about the NodeMCU module pin usage:
 
-![pinout_detail](https://github.com/danirizziero/FI-playground/assets/37268662/065e586b-f8ef-446f-b161-7249cee2d9b2)
+![NodeMCU_Pinout](https://github.com/danirizziero/FI-playground/assets/37268662/065e586b-f8ef-446f-b161-7249cee2d9b2)
 
 >***Note***: an additional VCC >= 5V is needed to power the relay switches (!= Relay Ctrl). As can be seen in the general scheme, the PS line could be used for this purpose.
 
 ------
 
-Here below are some photos of an ASAC_FI_playground istance, mounted in ASAC Laboratory @ Politecnico di Torino:
-<center>PHOTOS<br>PHOTOS<br>PHOTOS<br>PHOTOS<br> </center>
+Here below a photo of an ASAC_CPM istance, as it has been mounted in ASAC Laboratory @ DAUIN, Politecnico di Torino:
+![ASAC_CPM_istance](https://github.com/danirizziero/ASAC_CPM/assets/37268662/89fcbb40-c32a-4739-9b39-f2e08bb3ecb7)
 
->***Note***: in this model/setup, 8x TUL PYNQ-Z2 MPSoC Development boards have been used to compose the cluster. To edit each FTDI device serial name, and thus be able to manage all the boards singularly, refer to [ftdi-serial-flasher](https://github.com/EdwarDu/ftdi-serial-flasher) repository, by @EdwarDu.
+
+>***Note***: in this model/setup, 8x TUL PYNQ-Z2 MPSoC Development boards have been used to compose the cluster. To edit each FTDI device serial name, and thus be able to manage all the boards singularly, refer to [ftdi-serial-flasher](https://github.com/EdwarDu/ftdi-serial-flasher) repository, by [@EdwarDu](https://github.com/EdwarDu).
 
 ## Getting Started
 
-To initialize the cluster control system, MicroPython has to be installed on the NodeMCU module, together with some source code implementing the control features.
+To initialize the CPM, MicroPython firmware has to be flashed on the NodeMCU module, together with some source code implementing the control interface.
 
-0) **Install CH340 Driver**: for example through [this link](https://www.wch.cn/download/CH341SER_EXE.html).
-1) **Installing MicroPython firmware**: follow [this guide](docs/ESP8266_uPy_guide.pdf).
+0) **Install CH340 Driver**: from [this link](https://www.wch.cn/download/CH341SER_EXE.html).
+1) **Installing MicroPython firmware**: follow this guide [```docs/ESP8266_uPy_guide.pdf```](docs/ESP8266_uPy_guide.pdf).
 
-2) **Uploading the source files enabling control interface**
+2) **Uploading the uPy source files enabling control interface**
    
-    2.1) Install [adafruit-ampy](https://pypi.org/project/adafruit-ampy/) to upload/update source files stored in the ESP8266's flash memory.
+    2.1) Install [adafruit-ampy](https://pypi.org/project/adafruit-ampy/) on your local machine, to upload/update source files stored in the ESP8266's flash memory.
 
     ```sh
     pip install adafruit-ampy
@@ -52,7 +53,7 @@ To initialize the cluster control system, MicroPython has to be installed on the
 
 4) **Use the control interface**
 
-   Once all is set up, you can try the cluster control in interface by opening a serial connection (115200-8N1) with the NodeMCU module. If everything is good, a prompt '**#**' should appear. Here below are the available commands.
+   Once all is set up, you can use the CPM control interface by opening a serial connection (115200-8N1) with the NodeMCU module. If everything is good, a prompt '**#**' should appear. Here below are the available commands.
 
     | Command           | Description |
     | :---------------- | :------ |
