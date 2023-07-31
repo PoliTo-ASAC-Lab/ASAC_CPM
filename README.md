@@ -7,13 +7,14 @@ ASAC_CPM is a Cluster Power Manager solution, to be used for testing purposes or
 The overall setup requires low-cost components only and can be easily adapted and scaled based on necessity. To manage the power supply of the cluster nodes (ON/OFF) a set of relay switches is controlled by a [NodeMCU Lua Lolin V3 Module](https://www.az-delivery.de/en/products/nodemcu-lolin-v3-modul-mit-esp8266), implementing a user interface accessible through USB-serial connection.
 Here below is the general scheme of the hardware setup:
 
-![HW_Setup](https://github.com/danirizziero/FI-playground/assets/37268662/107f36ac-55cc-474d-a424-6bb6e35217cd)
+![HW_Setup](https://github.com/danirizziero/ASAC_CPM/assets/37268662/7e57bd38-930e-4d55-b451-e069c083dfe4)
 
 Here below the details about the NodeMCU module pin usage:
 
-![NodeMCU_Pinout](https://github.com/danirizziero/FI-playground/assets/37268662/065e586b-f8ef-446f-b161-7249cee2d9b2)
+![NodeMCU_Pinout](https://github.com/danirizziero/ASAC_CPM/assets/37268662/7e18c012-a647-45ae-8fb0-89661b3cc0cf)
 
->***Note***: an additional VCC >= 5V is needed to power the relay switches (!= Relay Ctrl). As can be seen in the general scheme, the PS line could be used for this purpose.
+
+>***Note***: an additional VCC >= 5V is needed to power the relay switches (!= Relay Ctrl). As can be seen in the HW Setup general scheme, the PS line could be used for this purpose.
 
 ------
 
@@ -68,4 +69,4 @@ Here below are some Commercial-Off-The-Shelf alternatives/similar products avail
 - [Microchip EVB-USB5734](https://www.microchip.com/en-us/development-tool/evb-usb5734) (536.20€)
 - [Cluster Triple for Raspberry Pi Compute Modules](https://clusterctrl.com/p/Triple) (49.00$)
 
-The total implementation cost (in July 2023) of the ASAC_CPM is <ins>**around 20€**</ins> (~12.50€ for the [8x Relay Module](https://www.az-delivery.de/en/products/8-relais-modul) + ~7.50€ for the [NodeMCU V3](https://www.az-delivery.de/en/products/nodemcu-lolin-v3-modul-mit-esp8266)).
+The total implementation cost (in July 2023) of the ASAC_CPM is <ins>**around 20€**</ins> (~12.50€ for the [8x Relay Module](https://www.az-delivery.de/en/products/8-relais-modul) + ~7.50€ for the [NodeMCU V3 Module](https://www.az-delivery.de/en/products/nodemcu-lolin-v3-modul-mit-esp8266)).
