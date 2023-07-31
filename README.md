@@ -69,4 +69,4 @@ Here below are some Commercial-Off-The-Shelf alternatives/similar products avail
 - [Microchip EVB-USB5734](https://www.microchip.com/en-us/development-tool/evb-usb5734) (536.20€)
 - [Cluster Triple for Raspberry Pi Compute Modules](https://clusterctrl.com/p/Triple) (49.00$)
 
-The total implementation cost (in July 2023) of the ASAC_CPM is <ins>**around 20€**</ins> (~12.50€ for the [8x Relay Module](https://www.az-delivery.de/en/products/8-relais-modul) + ~7.50€ for the [NodeMCU V3](https://www.az-delivery.de/en/products/nodemcu-lolin-v3-modul-mit-esp8266)).
+The total implementation cost (in July 2023) of the ASAC_CPM is <ins>**around 20€**</ins> (~12.50€ for the [8x Relay Module](https://www.az-delivery.de/en/products/8-relais-modul) + ~7.50€ for the [NodeMCU V3 Module](https://www.az-delivery.de/en/products/nodemcu-lolin-v3-modul-mit-esp8266)).
