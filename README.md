@@ -2,8 +2,6 @@
 
 ASAC_CPM is a Cluster Power Manager solution, to be used for testing purposes or extensive fault injection campaigns involving a cluster of devices. It can be easily adapted to be used with other kinds of board composing the cluster, like Arduino, Raspberry-Pi, others.
 
-------
-
 ## HW Setup
 
 The overall setup requires low-cost components only and can be easily adapted and scaled based on necessity. To manage the power supply of the cluster nodes (ON/OFF) a set of relay switches is controlled by a [NodeMCU Lua Lolin V3 Module](https://www.az-delivery.de/en/products/nodemcu-lolin-v3-modul-mit-esp8266), implementing a user interface accessible through USB-serial connection.
@@ -20,6 +18,7 @@ Here below the details about the NodeMCU module pin usage:
 ------
 
 Here below a photo of an ASAC_CPM istance, as it has been mounted in ASAC Laboratory @ DAUIN, Politecnico di Torino:
+
 ![ASAC_CPM_istance](https://github.com/danirizziero/ASAC_CPM/assets/37268662/89fcbb40-c32a-4739-9b39-f2e08bb3ecb7)
 
 
@@ -61,3 +60,12 @@ To initialize the CPM, MicroPython firmware has to be flashed on the NodeMCU mod
     | ```y ([1-8] \| all)``` | Power ON the device **[1-8]** or **all** the devices.   |
     | ```k ([1-8] \| all)``` | Power OFF the device **[1-8]** or **all** the devices.   |
     | ```r ([1-8] \| all)``` | Power-cycle (*OFF - 1sec - ON*) the device **[1-8]** or **all** the devices.|
+
+## Market COTS Alternatives
+
+Here below are some Commercial-Off-The-Shelf alternatives/similar products available on the market (in July 2023):
+- [Crowd Supply Programmable USB Hubs](https://mou.sr/3OBESQ7) (202.50$)
+- [Microchip EVB-USB5734](https://www.microchip.com/en-us/development-tool/evb-usb5734) (536.20€)
+- [Cluster Triple for Raspberry Pi Compute Modules](https://clusterctrl.com/p/Triple) (49.00$)
+
+The total implementation cost (in July 2023) of the ASAC_CPM is <ins>**around 20€**</ins> (~12.50€ for the [8x Relay Module](https://www.az-delivery.de/en/products/8-relais-modul) + ~7.50€ for the [NodeMCU V3](https://www.az-delivery.de/en/products/nodemcu-lolin-v3-modul-mit-esp8266)).
