@@ -11,7 +11,7 @@ Here below is the general scheme of the hardware setup:
 
 Here below the details about the NodeMCU module pin usage:
 
-![NodeMCU_Pinout](https://github.com/danirizziero/ASAC_CPM/blob/main/docs/NodeMCU_pinout.png)
+![NodeMCU_Pinout](https://github.com/danirizziero/ASAC_CPM/blob/main/docs/NodeMCU_pinout.png?raw=true)
 
 
 >***Note***: an additional VCC >= 5V is needed to power the relay switches (!= Relay Ctrl). As can be seen in the HW Setup general scheme, the PS line could be used for this purpose.
